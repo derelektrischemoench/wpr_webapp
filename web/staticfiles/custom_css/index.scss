@@ -1,0 +1,17 @@
+@import "mixins";
+@import "navbar";
+
+@include font-face("Lato","../fonts/Lato/Lato-Regular.ttf");
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.form-group {
+  display: flex;
+}
+
+.nav-item {
+  padding: 10px 10px;
+}

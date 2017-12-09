@@ -1,0 +1,6 @@
+out/
+
+# built files:
+web/staticfiles/custom_css/index.css
+web/staticfiles/custom_css/index.css.map
+/src/data
