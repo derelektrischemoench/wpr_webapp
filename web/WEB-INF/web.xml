@@ -11,7 +11,7 @@
 
     <servlet>
         <servlet-name>calculateServlet</servlet-name>
-        <servlet-class>servlets.calculateServlet</servlet-class>
+        <servlet-class>servlets.indexServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>calculateServlet</servlet-name>

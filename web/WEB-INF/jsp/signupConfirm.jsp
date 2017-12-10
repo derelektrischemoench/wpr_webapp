@@ -21,6 +21,16 @@
         </div>
     </div>
 
+    <c:choose>
+        <c:when test="${passwordsMatch eq false}">
+            Your passwords do not match, please try again
+        </c:when>
+        <c:otherwise>
+            Your passwords matched; we can create your account now
+        </c:otherwise>
+    </c:choose>
+
+
 </div>
 </body>
 </html>

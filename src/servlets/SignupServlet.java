@@ -24,10 +24,18 @@ public class SignupServlet extends HttpServlet {
         String password1 = req.getParameter("password");
         String password2 = req.getParameter("password2");
         
-        req.setAttribute("username", username);
-        req.setAttribute("password1", password1);
-        req.setAttribute("password2", password2);
         
-        rd.forward(req, res);
+        if(password1.equals(password2)) {
+            //req.setAttribute("passwordsMatch", true);
+            req.setAttribute("username", username);
+            req.setAttribute("password1", password1);
+            req.setAttribute("password2", password2);
+            rd.forward(req, res);
+        } else {
+            //req.setAttribute("passwordsMatch", false);
+            rd.forward(req, res);
+        }
+        
+        
     }
 }

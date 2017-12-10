@@ -7,13 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dfdf3e1-dca6-4c5b-bfc1-9f57940db1be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templateIncludes/headinclude.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/templateIncludes/headinclude.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templateIncludes/navinclude.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/templateIncludes/navinclude.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/SignupServlet.java" afterPath="$PROJECT_DIR$/src/servlets/SignupServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/calculateServlet.java" afterPath="$PROJECT_DIR$/src/servlets/indexServlet.java" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +28,7 @@
           <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
+                <state relative-caret-position="468">
                   <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
                   <folding />
                 </state>
@@ -40,33 +38,9 @@
           <file leaf-file-name="SignupServlet.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/servlets/SignupServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="signup.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/signup.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+                <state relative-caret-position="504">
+                  <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="calculateServlet.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/servlets/calculateServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="22" column="83" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="83" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -78,8 +52,8 @@
           <file leaf-file-name="signupConfirm.jsp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+                <state relative-caret-position="558">
+                  <caret line="29" column="22" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="29" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -119,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/servlets/loginServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/registerServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/sessionLoginForm.jsp" />
         <option value="$PROJECT_DIR$/src/servlets/sessionServlet.java" />
@@ -158,16 +131,17 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/reiseBuchung/buchungsformular.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/web/staticfiles/custom_css/_mixins.scss" />
-        <option value="$PROJECT_DIR$/src/servlets/calculateServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/registerJSP.jsp" />
         <option value="$PROJECT_DIR$/web/staticfiles/custom_css/index.scss" />
         <option value="$PROJECT_DIR$/web/staticfiles/custom_css/_vars.scss" />
         <option value="$PROJECT_DIR$/web/staticfiles/custom_css/_navbar.scss" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templateIncludes/navinclude.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/register.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/signup.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/servlets/calculateServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/indexServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/SignupServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp" />
       </list>
@@ -538,7 +512,7 @@
       <workItem from="1510911533990" duration="863000" />
       <workItem from="1510941710494" duration="3521000" />
       <workItem from="1512904416780" duration="273000" />
-      <workItem from="1512906656815" duration="4811000" />
+      <workItem from="1512906656815" duration="5954000" />
     </task>
     <task id="LOCAL-00001" summary="COMMIT ALL THE THINGS!!!">
       <created>1507713887665</created>
@@ -785,11 +759,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512908731323</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="signup form handling wip">
+      <created>1512911491010</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1512911491010</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103154000" />
+    <option name="totallyTimeSpent" value="104297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -907,7 +888,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fucking includes" />
     <MESSAGE value="well... this sucks shit." />
     <MESSAGE value="stuf" />
     <MESSAGE value="managed to access request properties in template" />
@@ -932,7 +912,8 @@
     <MESSAGE value="stuff works even bettor now, header and something" />
     <MESSAGE value="minor header changes" />
     <MESSAGE value="finished index page" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished index page" />
+    <MESSAGE value="signup form handling wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="signup form handling wip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1078,55 +1059,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/servlets/indexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="49" column="95" lean-forward="false" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/calculateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="83" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="83" />
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="468">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/signup.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
+        <state relative-caret-position="504">
           <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="720">
+          <caret line="56" column="15" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="56" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/SignupServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="504">
+          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/signupConfirm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="29" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
