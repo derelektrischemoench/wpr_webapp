@@ -1,12 +1,9 @@
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <jsp:include page="WEB-INF/templateIncludes/headinclude.jsp"/>
 <body>
 <jsp:include page="WEB-INF/templateIncludes/navinclude.jsp"/>
-
 
 
 <div class="container">
@@ -18,14 +15,47 @@
             <p>
                 All other jsps shall reside in /WEB-INF/jsp
             </p>
-            <c:out value="${pageContext.request.method}" />
+            ${pageContext.request.contextPath}
         </div>
     </div>
+
     <div class="row">
         <div class="col-sm-12">
-            <c:url value = "/calculateServlet"/>
+            <h2>Sign in </h2>
         </div>
     </div>
+    <c:choose>
+        <c:when test="${pageContext.request.method eq 'GET'}">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="${pageContext.request.contextPath}/signin" method="post">
+                        <div class="form-group">
+                            <label for="name">
+                                <p>Username:</p>
+                                <input type="text" id="name" name="name">
+                            </label>
+                        </div>
+                        <div class="form-group"><label for="password">
+                            <p>Passwort</p>
+                            <input type="text"></label></div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="amelden">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    Don't have an account yet? click <a href="/signup">here</a> to sign up.
+                </div>
+            </div>
+        </c:when>
+        <c:otherwise>
+            request is POST
+        </c:otherwise>
+    </c:choose>
+
+
 </div>
 </body>
 </html>

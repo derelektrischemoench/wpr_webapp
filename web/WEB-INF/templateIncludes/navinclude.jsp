@@ -4,9 +4,8 @@
     <div class="navbar-expand" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto flex-row">
             <li class="nav-item active">
-                <a href="/jsp" class="nav-link">Hddome</a>
+                <a href="/jsp" class="nav-link">Home</a>
             </li>
-            <li><% request.getContextPath(); %></li>
         </ul>
     </div>
 </nav>
