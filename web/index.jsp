@@ -1,10 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="WEB-INF/templateIncludes/headinclude.jsp"/>
+<jsp:include page="WEB-INF/${pageContext.request.contextPath}/templateIncludes/headinclude.jsp"/>
 <body>
-<jsp:include page="WEB-INF/templateIncludes/navinclude.jsp"/>
-
+<jsp:include page="WEB-INF/${pageContext.request.contextPath}/templateIncludes/navinclude.jsp"/>
 
 <div class="container">
     <div class="row">
@@ -46,7 +45,9 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    Don't have an account yet? click <a href="/signup">here</a> to sign up.
+                    ${pageContext.request.requestURI}
+                    ${pageContext.request.requestURL}
+                    Don't have an account yet? click <a href="${pageContext.request.requestURI}signup">here</a> to sign up.
                 </div>
             </div>
         </c:when>
