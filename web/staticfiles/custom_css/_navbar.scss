@@ -2,4 +2,10 @@ nav {
   background: url("../images/galaxy_h1_background.jpg") no-repeat center center;
   margin: 0 0 50px 0;
   height: 200px;
+
+  a.nav-link {
+    color: $colorLinkNav !important;
+    font-size: $fontSizeNav;
+
+  }
 }
