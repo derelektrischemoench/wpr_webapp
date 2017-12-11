@@ -21,6 +21,13 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-sm-12">
+            <p>This is the value of the passwordsMatch boolean</p>
+            <p>${passwordsMatch}</p>
+        </div>
+    </div>
+
     <c:choose>
         <c:when test="${passwordsMatch eq false}">
             Your passwords do not match, please try again

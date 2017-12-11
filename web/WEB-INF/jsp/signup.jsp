@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group"><label for="password">
                     <p>Passwort</p>
-                    <input type="text" id="password" name="password2"></label></div>
+                    <input type="password" id="password" name="password"></label></div>
                 <div class="form-group"><label for="password2">
                     <p>Passwort, wiederholen</p>
                     <input type="password" id="password2" name="password2"></label></div>
