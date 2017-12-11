@@ -6,6 +6,9 @@
             <li class="nav-item active">
                 <a href="/jsp" class="nav-link">Home</a>
             </li>
+            <li class="nav-item active">
+                <a href="/jsp" class="nav-link">Create new chapter</a>
+            </li>
         </ul>
     </div>
 </nav>
