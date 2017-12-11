@@ -1,5 +1,7 @@
 package servlets;
 
+import models.User;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +25,11 @@ public class SignupServlet extends HttpServlet {
         if(password1.equals(password2)) {
             //render the signup confirm template if the passwords match
             RequestDispatcher rd =  req.getRequestDispatcher("/WEB-INF/jsp/signupConfirm.jsp");
+            
+            //create the user object and serialize to file
+            User user = new User(username, password1);
+            user.serializeUser(user);
+            
             req.setAttribute("passwordsMatch", "true");
             req.setAttribute("username", username);
             req.setAttribute("password1", password1);
