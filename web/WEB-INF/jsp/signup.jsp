@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <jsp:include page="/WEB-INF${pageContext.request.contextPath}/templateIncludes/headinclude.jsp" />
@@ -29,6 +28,8 @@
                 <div class="form-group"><label for="password2">
                     <p>Passwort, wiederholen</p>
                     <input type="password" id="password2" name="password2"></label></div>
+                    <!--  Render an error message if the passwords do not match-->
+                    <span class="passwordErrorMsg">${errorMsg}</span>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="amelden">
                 </div>

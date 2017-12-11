@@ -14,7 +14,6 @@ public class SignupServlet extends HttpServlet {
     }
     
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        RequestDispatcher rd =  req.getRequestDispatcher("/WEB-INF/jsp/signupConfirm.jsp");
         
         String username = req.getParameter("name");
         String password1 = req.getParameter("password");
@@ -22,6 +21,8 @@ public class SignupServlet extends HttpServlet {
        
        
         if(password1.equals(password2)) {
+            //render the signup confirm template if the passwords match
+            RequestDispatcher rd =  req.getRequestDispatcher("/WEB-INF/jsp/signupConfirm.jsp");
             req.setAttribute("passwordsMatch", "true");
             req.setAttribute("username", username);
             req.setAttribute("password1", password1);
@@ -29,7 +30,11 @@ public class SignupServlet extends HttpServlet {
             rd.forward(req, res);
             
         } else {
+            //return the signup form again b/c the passwords didn't match
+            RequestDispatcher rd =  req.getRequestDispatcher("/WEB-INF/jsp/signup.jsp");
+            String errorMsg = "Your passwords didn't match. Plz try again";
             req.setAttribute("passwordsMatch", "false");
+            req.setAttribute("errorMsg", errorMsg);
             rd.forward(req, res);
         }
         
