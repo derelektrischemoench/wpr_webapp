@@ -14,7 +14,7 @@ public class CreateChapterServlet extends HttpServlet {
     }
     
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        RequestDispatcher rd = req.getRequestDispatcher();
+        //RequestDispatcher rd = req.getRequestDispatcher();
         
     }
 }

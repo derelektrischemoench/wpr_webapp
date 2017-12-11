@@ -2,11 +2,11 @@
 @import "mixins";
 @import "navbar";
 
-@include font-face("Lato","../fonts/Lato/Lato-Regular.ttf");
-
+@include font-face(Lato, '../fonts/Lato/Lato-Regular', normal, $asset-pipeline: false );
 
 body {
-  font-family: "Lato", sans-serif;
+  //@include font-face("Lato","/fonts/Lato/Lato-Regular.ttf");
+  font-family: 'Lato', serif;
 }
 
 .form-group {
@@ -15,4 +15,5 @@ body {
 
 .nav-item {
   padding: 10px 10px;
+
 }

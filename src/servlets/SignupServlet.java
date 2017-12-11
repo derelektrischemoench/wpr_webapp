@@ -1,9 +1,5 @@
 package servlets;
 
-import com.sun.corba.ee.spi.protocol.RequestDispatcherDefault;
-import org.apache.catalina.HttpResponse;
-import org.omg.PortableServer.REQUEST_PROCESSING_POLICY_ID;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
