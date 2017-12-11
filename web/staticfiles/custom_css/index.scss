@@ -5,7 +5,6 @@
 @include font-face(Lato, '../fonts/Lato/Lato-Regular', normal, $asset-pipeline: false );
 
 body {
-  //@include font-face("Lato","/fonts/Lato/Lato-Regular.ttf");
   font-family: 'Lato', serif;
 }
 
@@ -15,5 +14,8 @@ body {
 
 .nav-item {
   padding: 10px 10px;
+}
 
+.passwordErrorMsg {
+  color: $errorMsg;
 }
