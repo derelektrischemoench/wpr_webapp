@@ -27,5 +27,14 @@
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CreatechapterServlet</servlet-name>
+        <servlet-class>servlets.CreateChapterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreatechapterServlet</servlet-name>
+        <url-pattern>/createChapter</url-pattern>
+    </servlet-mapping>
+
 </web-app>
 <!-- http://localhost:8080/jsp/APPEND PATH HERE -->
