@@ -24,6 +24,7 @@ public class User {
         System.out.println(jsonString);
         
         //dump that suckah to file yo
+        //TODO: note; to view stdout output start the server in debug mode and enjoy log values under the glassfish log section in "debug"
         try {
             FileWriter fw = new FileWriter("serializedUsers.json");
             fw.write(jsonString);
