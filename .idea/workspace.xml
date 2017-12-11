@@ -6,11 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dfdf3e1-dca6-4c5b-bfc1-9f57940db1be" name="Default" comment="">
+    <list default="true" id="7dfdf3e1-dca6-4c5b-bfc1-9f57940db1be" name="Default" comment="add gson, fixed glassfish settings to be able to print shit to glassfish log when running debug conf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.java" afterPath="$PROJECT_DIR$/src/models/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/SignupServlet.java" afterPath="$PROJECT_DIR$/src/servlets/SignupServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/staticfiles/custom_css/_navbar.scss" afterPath="$PROJECT_DIR$/web/staticfiles/custom_css/_navbar.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +22,7 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="0">
               <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding />
             </state>
@@ -87,7 +84,7 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="522">
               <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -587,7 +584,7 @@
       <workItem from="1513001858128" duration="415000" />
       <workItem from="1513002295826" duration="3820000" />
       <workItem from="1513021751230" duration="45000" />
-      <workItem from="1513021938881" duration="168000" />
+      <workItem from="1513021938881" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="COMMIT ALL THE THINGS!!!">
       <created>1507713887665</created>
@@ -862,11 +859,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513003840636</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add gson, fixed glassfish settings to be able to print shit to glassfish log when running debug conf">
+      <created>1513022197021</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1513022197021</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115859000" />
+    <option name="totallyTimeSpent" value="115984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -983,7 +987,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="request differentiation by post and get works now" />
     <MESSAGE value="progress... can send values via get and shit in one servlet" />
     <MESSAGE value="call count thingy" />
     <MESSAGE value="lololol... the hash thing does not work for some reason" />
@@ -1008,7 +1011,8 @@
     <MESSAGE value="wip get null pointer on signup form submit though" />
     <MESSAGE value="password comparison works" />
     <MESSAGE value="holy... these fucking font face mixins suck shit." />
-    <option name="LAST_COMMIT_MESSAGE" value="holy... these fucking font face mixins suck shit." />
+    <MESSAGE value="add gson, fixed glassfish settings to be able to print shit to glassfish log when running debug conf" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gson, fixed glassfish settings to be able to print shit to glassfish log when running debug conf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1066,7 +1070,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="0">
           <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
           <folding />
         </state>
@@ -1190,12 +1194,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="522">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
