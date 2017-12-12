@@ -2,15 +2,16 @@ package models;
 
 import resources.gson.*;
 
+import javax.imageio.stream.FileImageOutputStream;
 import javax.swing.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
-public class User {
+public class User implements java.io.Serializable {
     private String username;
     private String password;
     private static final String filePath = new JFileChooser().getFileSystemView().getDefaultDirectory().toString();
+    private static final String absFilePath = filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser";
+    private File f;
     
     
     public User() {
@@ -24,29 +25,19 @@ public class User {
     
     public void serializeUser(User u) {
         //use gson to serialize ze user to json for persistence
-        Gson gsonSerializer = new Gson();
-        String jsonString = gsonSerializer.toJson(u);
-        String initialJsonContent = "{\"users\": [\n" +
-                                            "  {\"username\": \"a\", \"password\": \"b\"},\n" +
-                                            "  {\"username\": \"c\", \"password\": \"d\"}\n" +
-                                            "]}";
-       
-        
-        //create the serializedusers.json if it doesnt exist yet and prepopulate with the initial json structure
         try {
-            File f = new File(filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.json");
+            f = new File(absFilePath);
             
             if (f.createNewFile()) {
-                //write the initial json structure:
+                System.out.println("File successfully created");
                 
                 try {
-                    FileWriter fw = new FileWriter(filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.json", true);
-                    fw.write(initialJsonContent);
-                    fw.close();
+                    FileOutputStream foS = new FileOutputStream(absFilePath);
+                    ObjectOutputStream ooS = new ObjectOutputStream(f);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                System.out.println("File successfully created");
+                
             } else {
                 System.out.println("File already exists");
             }
@@ -55,12 +46,10 @@ public class User {
         }
         
         
-        
         //write the users to the json
         try {
-            FileWriter fw = new FileWriter(filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.json", true);
-            fw.write(jsonString);
-            fw.close();
+            FileOutputStream foS = new FileOutputStream(absFilePath);
+            ObjectOutputStream ooS = new ObjectOutputStream(f);
             
         } catch (IOException e) {
             e.printStackTrace();
