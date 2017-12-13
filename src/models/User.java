@@ -33,7 +33,8 @@ public class User implements java.io.Serializable {
                 
                 try {
                     FileOutputStream foS = new FileOutputStream(absFilePath);
-                    ObjectOutputStream ooS = new ObjectOutputStream(f);
+                    ObjectOutputStream ooS = new ObjectOutputStream(foS);
+                    ooS.writeObject(u);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -49,8 +50,8 @@ public class User implements java.io.Serializable {
         //write the users to the json
         try {
             FileOutputStream foS = new FileOutputStream(absFilePath);
-            ObjectOutputStream ooS = new ObjectOutputStream(f);
-            
+            ObjectOutputStream ooS = new ObjectOutputStream(foS);
+            //TODO: serialize to file
         } catch (IOException e) {
             e.printStackTrace();
         }
