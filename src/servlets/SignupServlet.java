@@ -15,6 +15,8 @@ public class SignupServlet extends HttpServlet {
         rd.forward(req, res);
     }
     
+    //TODO: do this with the database connection: see "Datenanbindungen" Script
+    
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         
         String username = req.getParameter("name");
@@ -28,7 +30,6 @@ public class SignupServlet extends HttpServlet {
             
             //create the user object and serialize to file
             User user = new User(username, password1);
-            user.serializeUser(user);
             
             req.setAttribute("passwordsMatch", "true");
             req.setAttribute("username", username);

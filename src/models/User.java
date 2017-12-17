@@ -1,14 +1,17 @@
 package models;
 
+import com.sun.media.sound.SoftLowFrequencyOscillator;
+import org.jcp.xml.dsig.internal.SignerOutputStream;
 import resources.gson.*;
 
 import javax.imageio.stream.FileImageOutputStream;
 import javax.swing.*;
 import java.io.*;
 
-public class User implements java.io.Serializable {
+public class User implements Serializable {
     private String username;
     private String password;
+    private static final long SerialVersionUID = 1L;
     private static final String filePath = new JFileChooser().getFileSystemView().getDefaultDirectory().toString();
     private static final String absFilePath = filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser";
     private File f;
@@ -21,41 +24,33 @@ public class User implements java.io.Serializable {
         super();
         this.username = username;
         this.password = password;
+        
+        serializeUser(this);
     }
     
     public void serializeUser(User u) {
-        //use gson to serialize ze user to json for persistence
+        
+        ObjectOutputStream oos = null;
+        FileOutputStream fos;
+        
         try {
-            f = new File(absFilePath);
-            
-            if (f.createNewFile()) {
-                System.out.println("File successfully created");
-                
+            fos = new FileOutputStream(filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser", true);
+            OutputStream buffer = new BufferedOutputStream(fos);
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(u);
+        } catch (Exception e) {
+            System.out.println("OhNoes");
+            e.printStackTrace();
+        } finally {
+            if (oos != null) {
                 try {
-                    FileOutputStream foS = new FileOutputStream(absFilePath);
-                    ObjectOutputStream ooS = new ObjectOutputStream(foS);
-                    ooS.writeObject(u);
-                } catch (IOException e) {
+                    oos.close();
+                } catch (Exception e) {
+                    System.out.println("Failure on closing oos");
                     e.printStackTrace();
                 }
-                
-            } else {
-                System.out.println("File already exists");
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        
-        
-        //write the users to the json
-        try {
-            FileOutputStream foS = new FileOutputStream(absFilePath);
-            ObjectOutputStream ooS = new ObjectOutputStream(foS);
-            //TODO: serialize to file
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
-        
     }
+    
 }
