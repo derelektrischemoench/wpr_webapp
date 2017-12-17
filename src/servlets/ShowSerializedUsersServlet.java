@@ -34,6 +34,8 @@ public class ShowSerializedUsersServlet extends HttpServlet {
                 rd.forward(req, resp);
                 
                 System.out.println("second try-block \n");
+                
+                //TODO: make deserialited users visible
 
                 
             } catch (ClassNotFoundException e) {
