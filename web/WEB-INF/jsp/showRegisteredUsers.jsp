@@ -8,16 +8,24 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-
-            <c:forEach items="${deserializedUsers}" var="user">
-                <tr>
-                    <td>Employee ID: <c:out value="${user.username}"/></td>
-                    <td>Employee Pass: <c:out value="${user.password}"/></td>
-                </tr>
-            </c:forEach>
-
+            <h1>Registered Users:</h1>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            ${userName} <br>
+            ${userPass}
+        </div>
+    </div>
+</div>
+
+<!--<c:forEach items="${deserializedUsers}" var="user">
+    <tr>
+        <td>Employee ID: <c:out value="${user.username}"/></td>
+        <td>Employee Pass: <c:out value="${user.password}"/></td>
+    </tr>
+</c:forEach>-->
+
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/wpr_vorlage_hoeferth.iml" filepath="$PROJECT_DIR$/wpr_vorlage_hoeferth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wprLernplatform.iml" filepath="$PROJECT_DIR$/wprLernplatform.iml" />
     </modules>
   </component>
 </project>

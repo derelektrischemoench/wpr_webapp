@@ -7,9 +7,9 @@
                 <a href="/jsp" class="nav-link">Home</a>
             </li>
             <li class="nav-item active">
-                <a href="/jsp" class="nav-link">Create new chapter</a>
+                <a href="/jsp/createChapter" class="nav-link">Create new chapter</a>
             </li>
-            <li class="nav-item"><a href="" class="nav-link">show serialized users</a></li>
+            <li class="nav-item"><a href="/jsp/registeredUsers" class="nav-link">show serialized users</a></li>
         </ul>
     </div>
 </nav>

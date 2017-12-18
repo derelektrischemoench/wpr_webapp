@@ -36,5 +36,14 @@
         <url-pattern>/createChapter</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ShowRegisteredUsersServlet</servlet-name>
+        <servlet-class>servlets.ShowRegisteredUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowRegisteredUsersServlet</servlet-name>
+        <url-pattern>/registeredUsers</url-pattern>
+    </servlet-mapping>
+
 </web-app>
 <!-- http://localhost:8080/jsp/APPEND PATH HERE -->

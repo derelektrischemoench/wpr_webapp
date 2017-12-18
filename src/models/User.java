@@ -28,6 +28,14 @@ public class User implements Serializable {
         serializeUser(this);
     }
     
+    public String getUsername() {
+        return username;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+    
     public void serializeUser(User u) {
         
         ObjectOutputStream oos = null;
