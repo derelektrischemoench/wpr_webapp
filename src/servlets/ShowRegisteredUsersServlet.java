@@ -36,7 +36,7 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
             ObjectInputStream ois = new ObjectInputStream(buffer);
             
             try {
-                ArrayList<User> deserializedUsers = (ArrayList<User>) ois.readObject();
+                ArrayList<User> deserializedUsers = (ArrayList) ois.readObject();
                 
                 for (User u : deserializedUsers) {
                     System.out.println(u.getUsername() + "\n");

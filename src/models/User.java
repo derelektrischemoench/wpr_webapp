@@ -54,7 +54,7 @@ public class User implements Serializable {
             fos = new FileOutputStream(filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser", false);
             OutputStream buffer = new BufferedOutputStream(fos);
             oos = new ObjectOutputStream(fos);
-            oos.writeObject(allUsers.size());
+            oos.writeObject(allUsers);
             
             for (User u : userlist ) {
                 oos.writeObject(u);
