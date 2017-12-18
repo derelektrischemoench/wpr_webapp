@@ -1,9 +1,6 @@
 package servlets;
 
-import com.sun.xml.wss.saml.internal.saml11.jaxb10.Object;
 import models.User;
-import org.omg.CosNaming.IstringHelper;
-import resources.gson.internal.bind.util.ISO8601Utils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.*;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.function.ObjIntConsumer;
 
 public class ShowRegisteredUsersServlet extends HttpServlet implements Serializable {
     private static long SerialVersionUID = 1L;
@@ -21,30 +18,28 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
     private static final String absFilePath = filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser";
     
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //deserialize the users file:
+        //create users file if ! exist to prevent fuckery
+        File SerializedUsers = new File(absFilePath);
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/jsp/showRegisteredUsers.jsp");
+        
+        if (!SerializedUsers.exists()) {
+            SerializedUsers.createNewFile();
+        }
         
         //todo: read the users from the list declared in User and show the items
         
-        User deserializedUser = null;
+        ArrayList<User> userlist = new ArrayList<>();
         
         try {
             FileInputStream file = new FileInputStream(absFilePath);
             ObjectInputStream ois = new ObjectInputStream(file);
+            User obj = null;
+            int usersLength = (int)ois.readObject();
             
-            deserializedUser = (User) ois.readObject();
-            ois.close();
+            
+            
             file.close();
-            
-            String userName = deserializedUser.getUsername();
-            String userPass = deserializedUser.getPassword();
-            
-            
-            
-            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/jsp/showRegisteredUsers.jsp");
-            req.setAttribute("userName", userName);
-            req.setAttribute("userPass", userPass);
-            
-            rd.forward(req, resp);
+            ois.close();
             
         } catch (ClassNotFoundException e) {
             System.err.println("Read didnt work");
