@@ -2,28 +2,11 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+### Notes:
+#### Database connection:
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Glassfish config via :4848
 
-### How do I get set up? ###
+Resources > JDBC > JDBC connection pools
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Der Treiber muss dann nach glassfish(home/.glassfish-4.1.2/glassfish4/glassfish/domains/domain1/lib) kopiert werden

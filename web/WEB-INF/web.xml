@@ -11,7 +11,7 @@
 
     <servlet>
         <servlet-name>calculateServlet</servlet-name>
-        <servlet-class>servlets.indexServlet</servlet-class>
+        <servlet-class>servlets.IndexServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>calculateServlet</servlet-name>
@@ -34,6 +34,15 @@
     <servlet-mapping>
         <servlet-name>CreatechapterServlet</servlet-name>
         <url-pattern>/createChapter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowRegisteredUsersServlet</servlet-name>
+        <servlet-class>servlets.ShowRegisteredUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowRegisteredUsersServlet</servlet-name>
+        <url-pattern>/registeredUsers</url-pattern>
     </servlet-mapping>
 
 </web-app>
