@@ -30,8 +30,6 @@ public class SignupServlet extends HttpServlet {
             
             //create the user object and serialize to file
             User user = new User(username, password1);
-            System.out.println("Called user constructor in Signupservlet");
-            
             req.setAttribute("passwordsMatch", "true");
             req.setAttribute("username", username);
             req.setAttribute("password1", password1);
