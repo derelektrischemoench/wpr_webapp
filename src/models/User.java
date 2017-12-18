@@ -16,7 +16,7 @@ public class User implements Serializable {
     private static final String filePath = new JFileChooser().getFileSystemView().getDefaultDirectory().toString();
     private static final String absFilePath = filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser";
     private File f;
-    private static List<User> allUsers; //class variable to hold all users
+    private static ArrayList<User> allUsers = new ArrayList<User>(); //class variable to hold all users; this gets serialized
     
     
     public User() {
@@ -29,7 +29,8 @@ public class User implements Serializable {
         
         //add to users List
         allUsers.add(this);
-        
+    
+        System.out.println(allUsers);
         //re-serialize the list to file
         serializeAllUsers(allUsers);
 
@@ -43,7 +44,7 @@ public class User implements Serializable {
         return password;
     }
     
-    public void serializeAllUsers(List<User> u) {
+    public void serializeAllUsers(ArrayList<User> userlist) {
         /*each time a new user is created this method serializes the classvariable allUsers to file*/
         
         ObjectOutputStream oos = null;
@@ -53,7 +54,12 @@ public class User implements Serializable {
             fos = new FileOutputStream(filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser", false);
             OutputStream buffer = new BufferedOutputStream(fos);
             oos = new ObjectOutputStream(fos);
-            oos.writeObject(u);
+            oos.writeObject(allUsers);
+            
+            for (User u : userlist ) {
+                oos.writeObject(u);
+            }
+            
         } catch (Exception e) {
             System.out.println("OhNoes");
             e.printStackTrace();
