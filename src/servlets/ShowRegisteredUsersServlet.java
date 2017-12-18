@@ -1,5 +1,6 @@
 package servlets;
 
+import com.sun.corba.se.spi.orbutil.fsm.InputImpl;
 import models.User;
 
 import javax.servlet.RequestDispatcher;
@@ -28,21 +29,28 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
         
         //todo: read the users from the list declared in User and show the items
         
-        ArrayList<User> userlist = new ArrayList<>();
         
         try {
-            FileInputStream file = new FileInputStream(absFilePath);
-            ObjectInputStream ois = new ObjectInputStream(file);
-            User obj = null;
-            int usersLength = (int)ois.readObject();
+            FileInputStream file = new FileInputStream(SerializedUsers);
+            InputStream buffer = new BufferedInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(buffer);
             
+            try {
+                ArrayList<User> deserializedUsers = (ArrayList<User>) ois.readObject();
+                
+                for (User u : deserializedUsers) {
+                    System.out.println(u.getUsername() + "\n");
+                    System.out.println(u.getPassword() + "\n");
+                }
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
             
-            
-            file.close();
             ois.close();
             
-        } catch (ClassNotFoundException e) {
-            System.err.println("Read didnt work");
+            
+        } catch (IOException ioex) {
+            ioex.printStackTrace();
         }
     }
     

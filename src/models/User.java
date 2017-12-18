@@ -19,7 +19,6 @@ public class User implements Serializable {
     private static ArrayList<User> allUsers = new ArrayList<User>(); //class variable to hold all users; this gets serialized
     
     
-    
     public User() {
     }
     
