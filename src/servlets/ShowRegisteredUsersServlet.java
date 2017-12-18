@@ -23,6 +23,8 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //deserialize the users file:
         
+        //todo: read the users from the list declared in User and show the items
+        
         User deserializedUser = null;
         
         try {
