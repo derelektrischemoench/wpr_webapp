@@ -15,6 +15,10 @@ public class CreateChapterServlet extends HttpServlet {
     
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         //RequestDispatcher rd = req.getRequestDispatcher();
+        String chapterName = req.getParameter("name");
+        String chapterDescription = req.getParameter("chapterform");
+    
+        System.out.println(chapterName + "\n" + chapterDescription);
         
     }
 }
