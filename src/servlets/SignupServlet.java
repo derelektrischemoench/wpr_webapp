@@ -15,8 +15,6 @@ public class SignupServlet extends HttpServlet {
         rd.forward(req, res);
     }
     
-    //TODO: do this with the database connection: see "Datenanbindungen" Script
-    
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         
         String username = req.getParameter("name");
