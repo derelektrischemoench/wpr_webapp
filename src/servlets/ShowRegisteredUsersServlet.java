@@ -27,9 +27,6 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
             SerializedUsers.createNewFile();
         }
         
-        //todo: read the users from the list declared in User and show the items
-        
-        
         try {
             FileInputStream file = new FileInputStream(SerializedUsers);
             InputStream buffer = new BufferedInputStream(file);
