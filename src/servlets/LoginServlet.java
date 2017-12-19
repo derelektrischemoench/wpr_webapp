@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet implements Serializable {
         String usersFilePath = filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser";
         
         //deserialize the users file
-        /*TODO: make the deserialization @ startup and make the arraylist globally available*/
+        /*TODO: do the deserialization @ startup and make the arraylist globally available*/
         try {
             InputStream fi = new FileInputStream(usersFilePath);
             InputStream buffer = new BufferedInputStream(fi);
@@ -34,22 +34,22 @@ public class LoginServlet extends HttpServlet implements Serializable {
             
             //deserialize the users Arraylist:
             try {
-                ArrayList<User> users = (ArrayList<User>)oi.readObject();
+                ArrayList<User> users = (ArrayList<User>) oi.readObject();
                 String inputUsername = req.getParameter("name");
                 String inputPassword = req.getParameter("password");
                 
                 //display it just so we know its working:
-                for(User u : users) {
+                for (User u : users) {
                     System.out.println(u.getUsername());
                     System.out.println(u.getPassword());
                     
-                    if (u.getUsername().equals(inputUsername)){ //the user exists in the serialized users file
+                    if (u.getUsername().equals(inputUsername)) { //the user exists in the serialized users file
                         if (u.getPassword().equals(inputPassword)) { //the password is correct
                             Cookie[] cookies = req.getCookies();
                             boolean foundCookie = false;
                             
-                            for(int i=0; i<cookies.length; i++) {
-                                Cookie cookie1 = cookies [i];
+                            for (int i = 0; i < cookies.length; i++) {
+                                Cookie cookie1 = cookies[i];
                                 if (cookie1.getName().equals(u.getUsername())) {
                                     System.out.println(cookie1.getValue());
                                     foundCookie = true;
@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet implements Serializable {
                             
                             if (!foundCookie) {
                                 Cookie cookie1 = new Cookie("Username", u.getUsername());
-                                cookie1.setMaxAge(24*3600); //1 day lifespan
+                                cookie1.setMaxAge(24 * 3600); //1 day lifespan
                                 res.addCookie(cookie1);
                             }
                             
