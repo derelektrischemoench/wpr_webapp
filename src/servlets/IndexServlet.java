@@ -18,6 +18,8 @@ public class IndexServlet extends HttpServlet {
         // deserialize all users to ram on the first visit to the site to make them available in the arraylist
         User.deserializeAllUsers();
         
+        //TODO:The deserialization that happens in User needs to be called in IndexServlet, which as of now doesn't yet get called, fix
+        
         
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
         rd.forward(request, response);
