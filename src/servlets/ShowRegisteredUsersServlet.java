@@ -39,6 +39,10 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
                     System.out.println(u.getUsername() + "\n");
                     System.out.println(u.getPassword() + "\n");
                 }
+                
+                req.setAttribute("deserializedUsers", deserializedUsers);
+                rd.forward(req, resp);
+                
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
