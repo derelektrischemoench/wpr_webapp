@@ -13,6 +13,8 @@ public class CreateChapterServlet extends HttpServlet {
         rd.forward(req, res);
     }
     
+    //TODO: serialize the chapters
+    
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         //RequestDispatcher rd = req.getRequestDispatcher();
         String chapterName = req.getParameter("name");
