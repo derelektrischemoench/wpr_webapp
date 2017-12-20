@@ -33,10 +33,8 @@ public class User implements Serializable {
         //add to users List
         allUsers.add(this);
         
-        System.out.println(allUsers);
         //re-serialize the list to file
         serializeAllUsers(allUsers);
-        
     }
     
     public String getUsername() {
@@ -122,6 +120,11 @@ public class User implements Serializable {
         }
         
         
+    }
+    
+    public static ArrayList<User> getAllUsers() {
+        //returns the class variable allUsers which is an arrayList holing all available users
+        return allUsers;
     }
     
 }

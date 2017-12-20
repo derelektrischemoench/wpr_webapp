@@ -26,35 +26,18 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
         if (!SerializedUsers.exists()) {
             SerializedUsers.createNewFile();
         }
-        
-        try {
-            FileInputStream file = new FileInputStream(SerializedUsers);
-            InputStream buffer = new BufferedInputStream(file);
-            ObjectInputStream ois = new ObjectInputStream(buffer);
-            
-            try {
-                ArrayList<User> deserializedUsers = (ArrayList) ois.readObject();
-                
-                for (User u : deserializedUsers) {
-                    System.out.println(u.getUsername() + "\n");
-                    System.out.println(u.getPassword() + "\n");
-                }
-                
-                req.setAttribute("deserializedUsers", deserializedUsers);
-                rd.forward(req, resp);
-                
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-            
-            ois.close();
-            
-            
-        } catch (IOException ioex) {
-            ioex.printStackTrace();
-        }
-    }
     
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        /*todo: this has to be in accordance w/ the deserialization loop inhibitor in User -> on every new user add the ArrayList<User> allUsers has to be repopulated*/
+        
+        ArrayList<User> deserializedUsers = User.getAllUsers();
+        
+        for (User u : deserializedUsers) {
+            System.out.println(u.getUsername() + "\n");
+            System.out.println(u.getPassword() + "\n");
+        }
+        
+        req.setAttribute("deserializedUsers", deserializedUsers);
+        rd.forward(req, resp);
     }
 }
