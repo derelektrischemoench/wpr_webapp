@@ -1,5 +1,7 @@
 package servlets;
 
+import models.User;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +14,11 @@ import java.lang.Math;
 
 public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+        // deserialize all users to ram on the first visit to the site to make them available in the arraylist
+        User.deserializeAllUsers();
+        
+        
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
         rd.forward(request, response);
     }

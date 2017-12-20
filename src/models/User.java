@@ -1,12 +1,14 @@
 package models;
 
 import com.sun.media.sound.SoftLowFrequencyOscillator;
+import org.glassfish.admin.amx.util.FileOutput;
 import org.jcp.xml.dsig.internal.SignerOutputStream;
 import resources.gson.*;
 
 import javax.imageio.stream.FileImageOutputStream;
 import javax.swing.*;
 import java.io.*;
+import java.time.format.FormatStyle;
 import java.util.*;
 
 public class User implements Serializable {
@@ -17,6 +19,7 @@ public class User implements Serializable {
     private static final String absFilePath = filePath + "/IdeaProjects/wprLernplatform/src/models/serializedUsers.ser";
     private File f;
     private static ArrayList<User> allUsers = new ArrayList<User>(); //class variable to hold all users; this gets serialized
+    private static int UserDeserializationCounter = 0;
     
     
     public User() {
@@ -29,11 +32,11 @@ public class User implements Serializable {
         
         //add to users List
         allUsers.add(this);
-    
+        
         System.out.println(allUsers);
         //re-serialize the list to file
         serializeAllUsers(allUsers);
-
+        
     }
     
     public String getUsername() {
@@ -42,6 +45,11 @@ public class User implements Serializable {
     
     public String getPassword() {
         return password;
+    }
+    
+    public void addUsers(User u) {
+        //This adds users to the arraylist and checks beforehand if a username is already taken
+        
     }
     
     public void serializeAllUsers(ArrayList<User> userlist) {
@@ -56,7 +64,7 @@ public class User implements Serializable {
             oos = new ObjectOutputStream(fos);
             oos.writeObject(allUsers);
             
-            for (User u : userlist ) {
+            for (User u : userlist) {
                 oos.writeObject(u);
             }
             
@@ -73,6 +81,47 @@ public class User implements Serializable {
                 }
             }
         }
+    }
+    
+    public static void deserializeAllUsers() {
+        /*deserializes the users file and stores it in the ram; this gets called on the first visit to /*/
+        System.out.println("calling user deserialization method");
+        ObjectInputStream ois = null;
+        FileInputStream fis;
+        
+        if (UserDeserializationCounter == 0) {
+            System.out.println("counter = 0, start condition met, users deserialized");
+            try {
+                try {
+                    fis = new FileInputStream(absFilePath);
+                    ois = new ObjectInputStream(fis);
+                    allUsers = (ArrayList<User>) ois.readObject();
+                    
+                    //display the deserialized users:
+                    for (User u : allUsers) {
+                        System.out.println(u.getUsername());
+                    }
+                } catch (FileNotFoundException e) {
+                    System.out.println("File not found when trying to deserialize users");
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    System.out.println("IOEx");
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    System.out.println("Class not found");
+                    e.printStackTrace();
+                }
+                
+                UserDeserializationCounter = 1;
+            } catch (Exception e) {
+                System.out.println("User deserialization failed, counter not decremented");
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("Users are already deserialized, runcondition not met.");
+        }
+        
+        
     }
     
 }
