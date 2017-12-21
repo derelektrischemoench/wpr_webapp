@@ -25,7 +25,9 @@ ${pageContext.request.requestURL}
                 <div class="form-group">
                     <label for="password">
                         <p>Passwort</p>
-                        <input type="password" id="password" name="password"></label></div>
+                        <input type="password" id="password" name="password"></label>
+                </div>
+                <span class="errorMsg">${errorMsg}</span>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="anmelden">
                 </div>

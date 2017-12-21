@@ -48,6 +48,7 @@ public class LoginServlet extends HttpServlet implements Serializable {
                             Cookie[] cookies = req.getCookies();
                             boolean foundCookie = false;
                             
+                            //In case the username is already signed in
                             for (int i = 0; i < cookies.length; i++) {
                                 Cookie cookie1 = cookies[i];
                                 if (cookie1.getName().equals(u.getUsername())) {
@@ -56,15 +57,23 @@ public class LoginServlet extends HttpServlet implements Serializable {
                                 }
                             }
                             
+                            //the user is not yet authenticated, give him a cookie
                             if (!foundCookie) {
                                 Cookie cookie1 = new Cookie("Username", u.getUsername());
                                 cookie1.setMaxAge(24 * 3600); //1 day lifespan
                                 res.addCookie(cookie1);
                             }
                             
-                            
                             RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/jsp/loginSuccessful.jsp");
                             rd.forward(req, res);
+                        } else {
+                            //the password provided is incorrect, render the signin form again
+                            String errorMsg = "The password you provided is incorrect";
+                            
+                            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+                            req.setAttribute("errorMsg", errorMsg);
+                            rd.forward(req, res);
+                            
                         }
                     }
                 }

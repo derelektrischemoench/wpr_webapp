@@ -27,8 +27,17 @@
                 <div class="form-group">
                     <label for="password">
                         <p>Passwort</p>
-                        <input type="password" id="password" name="password"></label></div>
+                        <input type="password" id="password" name="password">
+                        <div>
+                            <span class="passwordErrorMsg">
+                                ${errorMsg}
+                            </span>
+                        </div>
+                    </label>
+                </div>
                 <div class="form-group">
+
+
                     <input type="submit" class="btn btn-primary" value="anmelden">
                 </div>
             </form>
