@@ -83,6 +83,7 @@ public class User implements Serializable {
     
     public static void deserializeAllUsers() {
         /*deserializes the users file and stores it in the ram; this gets called on the first visit to /*/
+        /*TODO: this doesn't work anymore, fix me*/
         System.out.println("calling user deserialization method");
         ObjectInputStream ois = null;
         FileInputStream fis;

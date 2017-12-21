@@ -32,11 +32,6 @@ public class ShowRegisteredUsersServlet extends HttpServlet implements Serializa
         
         ArrayList<User> deserializedUsers = User.getAllUsers();
         
-        for (User u : deserializedUsers) {
-            System.out.println(u.getUsername() + "\n");
-            System.out.println(u.getPassword() + "\n");
-        }
-        
         req.setAttribute("deserializedUsers", deserializedUsers);
         rd.forward(req, resp);
     }

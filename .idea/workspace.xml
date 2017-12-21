@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/models/User.java" afterPath="$PROJECT_DIR$/src/models/User.java" />
       <change beforePath="$PROJECT_DIR$/src/models/serializedUsers.ser" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/servlets/IndexServlet.java" />
       <change beforePath="$PROJECT_DIR$/src/servlets/ShowRegisteredUsersServlet.java" afterPath="$PROJECT_DIR$/src/servlets/ShowRegisteredUsersServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,13 +21,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.32676056">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Chapter.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/models/Chapter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
+                <state relative-caret-position="198">
                   <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
                   <folding />
                 </state>
@@ -38,7 +37,7 @@
           <file leaf-file-name="IndexServlet.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/servlets/IndexServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
+                <state relative-caret-position="180">
                   <caret line="22" column="90" lean-forward="false" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -51,7 +50,7 @@
             <entry file="file://$PROJECT_DIR$/src/servlets/ShowRegisteredUsersServlet.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="630">
-                  <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+                  <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -70,12 +69,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/models/User.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+                <state relative-caret-position="522">
+                  <caret line="103" column="42" lean-forward="false" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
                   <folding>
                     <element signature="e#1313#1314#0" expanded="true" />
                     <element signature="e#1344#1345#0" expanded="true" />
@@ -170,8 +169,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/templateIncludes/navinclude.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/showRegisteredUsers.jsp" />
         <option value="$PROJECT_DIR$/src/servlets/IndexServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlets/ShowRegisteredUsersServlet.java" />
         <option value="$PROJECT_DIR$/src/models/User.java" />
+        <option value="$PROJECT_DIR$/src/servlets/ShowRegisteredUsersServlet.java" />
       </list>
     </option>
   </component>
@@ -195,9 +194,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1312" />
+    <option name="x" value="67" />
     <option name="y" value="27" />
-    <option name="width" value="1248" />
+    <option name="width" value="1853" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -568,14 +567,8 @@
       <workItem from="1513760371612" duration="589000" />
       <workItem from="1513770920405" duration="153000" />
       <workItem from="1513783570328" duration="1238000" />
-      <workItem from="1513785241960" duration="234000" />
-    </task>
-    <task id="LOCAL-00001" summary="COMMIT ALL THE THINGS!!!">
-      <created>1507713887665</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1507713887666</updated>
+      <workItem from="1513785241960" duration="574000" />
+      <workItem from="1513859453034" duration="24000" />
     </task>
     <task id="LOCAL-00002" summary="fix data type incompatibility">
       <created>1508131885150</created>
@@ -913,11 +906,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513764693679</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="deserialization to arraylist on startup done">
+      <created>1513785527163</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1513785527164</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156513000" />
+    <option name="totallyTimeSpent" value="156877000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,8 +929,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1312" y="27" width="1853" height="1053" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -950,9 +949,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47413793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48706895" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36745688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18211207" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18211207" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21416713" sideWeight="0.4948718" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20674406" sideWeight="0.5051282" order="5" side_tool="true" content_ui="tabs" />
@@ -1035,7 +1034,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="todo: make the save session in url work" />
     <MESSAGE value="add bestellung aufgeben form" />
     <MESSAGE value="bestellungAufgeben form works with exception handling" />
     <MESSAGE value="cookies n shit" />
@@ -1060,7 +1058,8 @@
     <MESSAGE value="login and cookie creation worx" />
     <MESSAGE value="user deserialisation implemented" />
     <MESSAGE value="add todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add todo" />
+    <MESSAGE value="deserialization to arraylist on startup done" />
+    <option name="LAST_COMMIT_MESSAGE" value="deserialization to arraylist on startup done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1265,7 +1264,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Chapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="198">
           <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
@@ -1283,7 +1282,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="21" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/IndexServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="90" lean-forward="false" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,28 +1302,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="22" column="90" lean-forward="false" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/ShowRegisteredUsersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        <state relative-caret-position="522">
+          <caret line="103" column="42" lean-forward="false" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
           <folding>
             <element signature="e#1313#1314#0" expanded="true" />
             <element signature="e#1344#1345#0" expanded="true" />
